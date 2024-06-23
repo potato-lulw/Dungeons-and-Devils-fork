@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/login.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <title>login form</title>
+</head>
+
+<body>
+    <div class="login">
+        
+        <form style="text-align: center;" name="login" id="login-form" class="login__form">
+            <h1 class="login__title">Login</h1>
+            <p style="margin-bottom: 30px;">Even new users simply enter a username and password as usual to register their account.</p>
+
+            <div class="login__content">
+                <div class="login__box">
+                    <i class="ri-user-3-line login__icon"></i>
+
+                    <div class="login__box-input">
+                        <input type="text" required class="login__input" id="uname" placeholder=" " name="uname">
+                        <label for="uname" class="login__label">Username</label>
+                    </div>
+                </div>
+
+                <div class="login__box">
+                    <i class="ri-lock-2-line login__icon"></i>
+
+                    <div class="login__box-input">
+                        <input type="password" required class="login__input" id="login-pass" placeholder=" " name="password">
+                        <label for="login-pass" class="login__label">Password</label>
+                        <i class="ri-eye-off-line login__eye" id="login-eye"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="login__check">
+                <div class="login__check-group">
+                    <input type="checkbox" class="login__check-input" id="login-check" name="remember" value="true">
+                    <label for="login-check" class="login__check-label">Remember me</label>
+                </div>
+
+                <a href="#" class="login__forgot">Forgot Password?</a>
+            </div>
+
+            <button type="submit" class="login__button">Login / Sign Up</button>
+        </form>
+    </div>
+
+    <script src="/public/JS/login.js"></script>
+    <script>    
+        const form = document.forms['login'];
+
+        form.addEventListener('submit', e => {
+            // setTimeout(() => {form.reset();}, 1000)
+            e.preventDefault()
+
+            const formData = {};
+            $("#login-form").serializeArray().forEach(item => {
+                formData[item.name] = item.value;
+            });
+
+            fetch("/login/", {
+                    method: "POST",
+                    body: JSON.stringify(formData),
+                    headers: {
+                        "Content-type": "application/json; charset=UTF-8"
+                    }
+                })
+                .then((response) => response.json())
+                .then((json) => {
+                    console.log(json)
+                    /*if(json['msg'] === "success"){
+                        //window.location.href = 'success.html';
+                    } else {
+                        console.log("Failed")
+                    }*/
+                });
+        })
+    </script>
+
+</body>
+
+</html>

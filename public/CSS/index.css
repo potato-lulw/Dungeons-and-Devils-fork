@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Koulen&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arvo:ital@1&display=swap');
+
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    color: black;
+}
+
+/*----------------------- 
+ #        Nav Bar
+-------------------------*/
+
+#header{
+    width: 100%;
+    height: 100vh;
+    z-index: -2;
+}
+
+.navbar{
+    padding: 10px 10%;
+    width: 100%;
+    height: 100px;
+    position: fixed;   
+    top: 0;
+    left: 0;
+    transition: 0.6s;
+    background: rgb(84,58,183);
+    background: linear-gradient(60deg, rgba(84,58,183,1) 0%, rgba(0,172,193,1) 100%);
+    z-index: 1;
+}
+
+div.sticky{
+    background: rgb(30,40,109);
+    background: linear-gradient(90deg, rgb(30, 40, 109, 1) 32%, rgb(11, 89, 173, 1) 100%);
+    height: 80px;
+    padding: 2px 10%;
+}
+
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;    
+}
+
+.logo > img{
+    height: 100px;
+    display: inline-block;
+    width: 100px;
+    margin-top: -10px;
+    transition: 0.6s;
+}
+
+.logo > a{
+    font-size: 40px;
+    font-family: 'Koulen', sans-serif;
+    /*padding-bottom: 10px;*/
+    text-decoration: none;
+    color: #fff;
+    padding-left: 10px;
+    margin-bottom: 5px;
+    transition: 0.6s;
+}
+
+.profile-arrow{
+    color: #fff;
+}
+
+.nav_items > a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    margin-left: 50px;
+    font-family: 'Teko', sans-serif;
+    font-size: 30px;
+    transition: 0.4s;
+    position: relative;
+}
+
+.nav_items a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: rgb(238,150,31);
+    background: linear-gradient(90deg, rgba(238,150,31,1) 35%, rgba(245,187,69,1) 100%);
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+}
+
+.nav_items a:hover::after{
+    width: 100%;
+    transition: 0.4s;
+}
+
+/*----------------------- 
+ # Hero Section
+-------------------------*/
+
+.body{
+    padding: 0 100px;
+}
+
+#characters{
+    margin-top: 130px;
+}
+
+.heading{
+    display: inline;
+    position: relative;
+}
+
+.heading::after{
+    content: '';
+    width: 100%;
+    height: 3px;
+    background: rgb(16, 11, 3);
+    background: linear-gradient(90deg, rgba(238,150,31,1) 35%, rgba(245,187,69,1) 100%);
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+}
+
+.heading:hover::after{
+    width: 100%;
+    transition: 0.4s;
+}
+
+.msg {
+    margin-top: 30px;
+}
+
+.btn{
+    margin-top: 20px;
+    height: 50px;
+    width: 300px;
+    font-size: 20px;
+    border-radius: 10px;
+    outline: none;
+    border: 1px solid rgb(19,81,179);
+    background-color: #fff;
+    transition: background 0.5s;
+    transition: color 0.5s;
+}
+
+.btn:hover{
+    cursor: pointer;
+    background: rgb(19,81,179);
+    background: linear-gradient(25deg, rgba(19,81,179,1) 24%, rgba(0,177,255,1) 100%);
+    color: #ffffff;
+}
+
+#campaigns{
+    margin-top: 20px;
+}

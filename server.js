@@ -1,4 +1,5 @@
 import express from "express";
+const cors = require('cors');
 import {login} from "./methods/login.js";
 import { dirname } from "path";
 import { fileURLToPath } from "url";
@@ -17,6 +18,7 @@ server.use((req, res, next) => {
     next();
 });
 
+server.use(cors());
 server.use(express.json());
 server.use(express.urlencoded({ extended: true }));
 

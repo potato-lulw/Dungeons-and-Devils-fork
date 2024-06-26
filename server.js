@@ -78,4 +78,7 @@ server.post("/login", async (req, res, next) => {
     res.json(await login(req.body.uname, req.body.password));
 })
 
+server.post("/create-campaign", async (req, res, next) => {
+    
+})
 

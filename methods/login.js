@@ -36,7 +36,7 @@ async function login(uname, pass){
                                  "total_chars":0,
                                  "max_chars":4,
                                  "characters":{},
-                                 "created_campaign":{},
+                                 "created_campaign":[],
                                  "joined_capaign":[]
                                 }
             

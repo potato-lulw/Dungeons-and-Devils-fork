@@ -76,6 +76,10 @@ server.get('/public/JS/login.js', (req, res) => {
 -----------------------------
 */ 
 
+server.get("/login", (req, res) => {
+    res.json({"Hello":"World!"});
+})
+
 server.post("/login", async (req, res, next) => {
     res.json(await login(req.body.uname, req.body.password));
 })

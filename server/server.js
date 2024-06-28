@@ -1,6 +1,6 @@
 import express from "express";
 const cors = require('cors');
-import {login} from "./methods/login.js";
+import {login} from "../methods/login.js";
 import { dirname } from "path";
 import { fileURLToPath } from "url";
 import session from 'express-session';
@@ -84,3 +84,4 @@ server.post("/create-campaign", async (req, res, next) => {
     
 })
 
+export default server;

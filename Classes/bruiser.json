@@ -37,7 +37,7 @@
                 "scrapper": "1d6",
                 "fury": 2,
                 "feature_name": [
-                    {"name": "Brawling Style Feature", "desc": ""},
+                    {"name": "Brawling Style Feature", "desc": "At 3rd Level, you choose and develop a way of brawling that best defines your fighting style: Black Fist Style, Dragon Style, or Beast Style. all detailed at the end of the class description. Your brawling style grants you features at 3rd level and again at 6th, 11th, and 17th level.", "choice": ["Black Fist Style", "Dragon Style", "Beast Style"]},
                     {"name": "Blood For Brawn", "desc": "Starting at 3rd level, when you are reduced to half your hit point maximum or less, you can use your reaction to gain temporary hit points equal to a roll of your scrapper die + Bruiser level and you regain all expended fury points. You cannot use this feature again until you finish a short or long rest."}
                 ]
             },
@@ -65,7 +65,7 @@
                 "scrapper": "1d8",
                 "fury": 4,
                 "feature_name": [
-                    {"name": "Brawling Style Feature", "desc": ""},
+                    {"name": "Brawling Style Feature", "desc": "At 3rd Level, you choose and develop a way of brawling that best defines your fighting style: Black Fist Style, Dragon Style, or Beast Style. all detailed at the end of the class description. Your brawling style grants you features at 3rd level and again at 6th, 11th, and 17th level."},
                     {"name": "Sprint Assault", "desc": "Starting at 6th level, you've instinctively learned how to incorporate a little bit of haki into your attacks. Your unarmed strikes and bruiser weapon count as magical for the purpose of overcoming resistance and immunity to non-magical attacks and damage."}
                 ]
             },
@@ -107,7 +107,7 @@
                 "scrapper": "1d10",
                 "fury": 6,
                 "feature_name": [
-                    {"name": "Brawling Style Feature", "desc": ""}
+                    {"name": "Brawling Style Feature", "desc": "At 3rd Level, you choose and develop a way of brawling that best defines your fighting style: Black Fist Style, Dragon Style, or Beast Style. all detailed at the end of the class description. Your brawling style grants you features at 3rd level and again at 6th, 11th, and 17th level."}
                 ]
             },
             "level 12": {
@@ -155,7 +155,7 @@
                 "scrapper": "1d12",
                 "fury": 9,
                 "feature_name": [
-                    {"name": "Brawling Style Feature", "desc": ""}
+                    {"name": "Brawling Style Feature", "desc": "At 3rd Level, you choose and develop a way of brawling that best defines your fighting style: Black Fist Style, Dragon Style, or Beast Style. all detailed at the end of the class description. Your brawling style grants you features at 3rd level and again at 6th, 11th, and 17th level."}
                 ]
             },
             "level 18": {
@@ -181,6 +181,59 @@
                 "feature_name": [
                     {"name": "The King", "desc": "At 20th level, you are truly the strongest. Your Strength and Constitution scores increase by 2. Your maximum for those scores is now 22. Additionally, when you complete a long rest you regain all expended hit dice instead of half your expended hit dice."}
                 ]
+            },
+            "brawling_style": {
+                "desc": "Despite how easy it may be to generalize the brutish ways of a bruiser, each have a fairly distinct way of fighting. It may depend on their spirit, special attacks, or the way fury fuels their power. This comes in the form of using different fighting styles, typically representing how they were raised and taught to fight, and how they continue to train.",
+                "black_fist_style": {
+                    "desc": "Similar to how the 'Black Leg Style' utilizes kicks, this style is used by those who primarily use their fists as weapons. Many who utilize this style are often feared for their display of otherworldly strength, speed, defense, and use of haki in battle. The spirit of those who use this style is often heroic, with a hint of bloodlust. Black fist style is named after the way its users coat their limbs in extremely dark and thick layers of haki.",
+                    "bonus_proficiency": "You have trained to unlock the upper limits of your strength. You gain proficiency with the Athletics Skill. If you are already proficient, you gain proficiency in the Acrobatics or Insight skill instead.",
+                    "level_3": [
+                        {"name": "Demon Stance", "desc": "Also at the 3rd level, you develop a demonic bloodthirst, granting you power as you rip apart your enemies. When you reduce a creature within 5 feet of you to 0 hit points, you gain temporary hit points equal to your Constitution modifier + your Bruiser level (minimum of 1 temporary hit point)."}
+                    ],
+                    "level_6": [
+                        {"name": "Haki-Coated", "desc": "At 6th level, you may unlock any one 'Uncommon' Color of Armament Haki Advancement feat from <b>Chapter 7</b> of this book. If you have already taken all the uncommon armament haki feats, you may take an uncommon haki advancement feat under a different color of haki, assuming you meet the prerequisites."}
+                    ],
+                    "level_11": [
+                        {"name": "Bone Crusher", "desc": "At 11th level, you can perform a variety of combat maneuvers while you are grappling an opponent within 5 feet of you:\n- You can perform a mighty headbutt on a creature you are grappling. If you deal damage with an unarmed strike against a creature you are grappling, their attacks will have disadvantage until the start of your next turn. You can only use this once per turn.\n- You can perform a backbreaker on a creature you are grappling. If you deal damage with an unarmed strike against a creature you are grappling, you can spend 1 fury point to attempt to stun them. The target must succeed on a Constitution saving throw or be Stunned until the end of your next turn. You can only use this once per turn.\n- When you take the attack action, you may spend 1 or more fury points to perform a suplex on a creature your size or larger you are grappling. They must make a Constitution saving throw against your Fury Save DC. On a failed save, the target takes the number of fury points spent + 3 scrapper die in bludgeoning damage and is knocked prone, or only takes half as much damage on a successful one. After this effect is used, the grapple ends."}
+                    ],
+                    "level_17": [
+                        {"name": "Black Fist Master", "desc": "At 17th level, you may unlock any one 'Very Rare' or lower Color of Armament Haki Advancement feat from <b>Chapter 7</b>. If you have already taken all the very rare and lower armament haki feats, you may take a very rare or lower haki advancement feat under a different color of haki, assuming you meet the prerequisites."}
+                    ]
+                },
+                "dragon_style": {
+                    "desc": "This brawling style can be best described as a fierce style that emulates the pride and might of a dragon. This style uses a mixture of Unarmed Strikes and Weapon Attacks. Users of the dragon style are fierce fighters that crush and pulverize their enemies with raw strength, guided by the wrath of a dragon spirit surrounding them. Very few have ever lived to see this style used at its full potential.",
+                    "level_3": [
+                        {"name": "Dragon Stance", "desc": "Starting at 3rd level, your limbs are surrounding by the aura of a mighty dragon. when you damage a target with an unarmed strike or bruiser weapon attack, you can change the damage type to fire, cold, or lightning."},
+                        {"name": "Dragon's Breath", "desc": "Also at 3rd level, when you take the Attack action on your turn, you can spend 1 Fury point replace one of the attacks with a burst of draconic energy in either a 15-foot cone or a 30-foot line that is 5 feet wide (your choice). Choose a damage type: fire, cold, or lightning. Each creature in the area must make a Dexterity saving throw against your Fury save DC, taking damage of the chosen type equal to two rolls of your Scrapper die on a failure, or half as much damage on a success.\nAt 11th level, the damage of your breath increases to three rolls of your Scrapper die."}
+                    ],
+                    "level_6": [
+                        {"name": "Thunderous Leap", "desc": "At 6th level, you gain the blinding speed of a dragon. When you use Brute Force, instead of taking the shove attack or Dash action, you can teleport up to 30 feet toward a point you can see and gain advantage on your next attack."}
+                    ],
+                    "level_11": [
+                        {"name": "Conqueror of Three Worlds", "desc": "At 11th level, you are able to emit a larger blast of draconic energy.\nAs an action, you can expend 2 Fury points to hit the ground, where it erupts everything around you with energy for a brief but deadly instant.\nAny creature of your choice within 20 feet of you must make a Dexterity saving throw against your Fury save DC. A creature takes fire, thunder, or lightning damage equal to two scrapper die + your Constitution modifier on a failed saving throw, and half as much damage on a successful one."}
+                    ],
+                    "level_17": [
+                        {"name": "Dragon Emperor", "desc": "At 17th level, when you enter into your frenzy using Thrill of the Fight, you surround yourself with an aura of draconic spirit energy for 1 minute. You shed bright light in a 30-foot radius and dim light for an additional 30 feet from this aura. You can extinguish or restore the light as a Bonus Action. You gain the following abilities while this effect is active:\n- If an enemy you can see hits you with an attack within 30 feet, you can use your reaction to deal a Scrapper die in fire, cold, or lightning damage to them.\n- When you damage a creature with your Dragon's breath, the energy clings to the target if they failed the save. At the start of each of the creature’s turns, it takes damage of the type dealt equal to one roll of your Scrapper die. At the end of its turn, the creature can repeat the save, ending the effect on itself on a success."}
+                    ]
+                },
+                "beast_style": {
+                    "desc": "Certain great fighters desire a powerful companion in battle. Bruiser that utilize the beast style have developed a special bond with nature, allowing them to tame the fearsome beasts they might find along their journey. Through mutual respect and coordination, these bruisers and their companions make for a deadly duo.",
+                    "bonus_proficiency": "When you choose this style at 3rd level, you gain proficiency with the Animal Handling skill. If you are already proficient, you gain proficiency with the Nature or Survival skill instead.",
+                    "level_3": [
+                        {"name": "Beast Companion", "desc": "Starting at 3rd level when you learn this style, you begin to use your strength and skills to create a powerful bond with a creature of the natural world.\nWith 8 hours of work and the expenditure of ฿250,000 worth of rare herbs or fine food, you discover an animal to serve as your faithful companion. You normally select you companion from among the following animals: an <b>ape</b>, a <b>black bear</b>, a <b>boar</b>, a <b>giant badger</b>, a <b>giant weasel</b>, a <b>mule</b>, a <b>panther</b>, or a <b>wolf</b>. However, your DM might also pick one of these animals for you, based on the surrounding terrain and on what types of creatures would logically be present in the area.\nAt the end of the 8 hours, your beast companion appears and gains all the benefits of your Companion’s Bond ability. You can have only one animal companion at a time.\nIf your beast companion is ever slain, the bond you share allows you to return it to life by reincarnating it. With 8 hours of work and the expenditure of ฿250,000 worth of rare herbs or fine food, you call forth your companion’s spirit to find a new body for it. You can return a beast companion to life in this manner in any location, even without having its body with you.\nIf you use this ability to return a former animal companion to life while you have a current beast companion, your current companion leaves you and is replaced by the restored companion.\n<h3>Companion's Blood</h3>\nYour animal companion gains a variety of benefits while it is linked to you.\nThe animal companion loses its Multiattack action, if it has one.\nThe companion obeys your commands as best it can. You can use a bonus action on each of your turns to verbally command your companion to take the Attack, Dash, Disengage, Dodge, or Help action that turn. It can also use its movement at any point during your turn. It does not have its own turn unless you are incapacitated or absent, in which case your companion acts on its own and rolls initiative. Your companion never requires your command to use its reaction, such as when making an opportunity attack.\nYour animal companion has abilities and game statistics determined in part by your level. Your companion uses your proficiency bonus rather than its own. You add your proficiency bonus to your companion’s AC, saving throws, attack rolls, and damage rolls.\nYour animal companion gains proficiency in two skills of your choice. It also becomes proficient with all saving throws. For each level you gain after 3rd, your animal companion gains an additional hit die determined by the creature's hit dice and increases its hit points and maximum by rolling its hit die and adding its constitution modifier to the total, then increasing its maximum hit points by that amount.\nWhenever you gain the Ability Score Improvement class feature, your companion’s abilities also improve. Your companion can increase one ability score of your choice by 2, or it can increase two ability scores of your choice by 1. As normal, your companion can’t increase an ability score above 20 using this feature unless its description specifies otherwise.\nYour companion shares your interests and alignment, and has personality traits and a design of your choice (with DM assistance if required)."},
+                        {"name": "Beast Stance", "desc": "At 3rd level, you share your food, water, shelter, and training sessions with your beast companion. Additionally, you both learn to coordinate in battle using your brawling techniques. You share the following Fury abilities:\n<b>Machine Gun Blows.</b> When you use this fury ability, your companion can make one or both attacks instead of you.\n<b>Brute Force.</b> When you use this fury ability, your companion can take the Dash action.\n<b>Brace for Impact.</b> When you gain temporary hit points from this fury ability, your companion also gains the same amount of temporary hit points."}
+                    ],
+                    "level_6": [
+                        {"name": "Bestial Spirit Assault", "desc": "At 6th level, your companion's attacks also count as magical for the purpose of overcoming resistance and immunity to non-magical attacks and damage."},
+                        {"name": "Primal Coordination", "desc": "Also at 6th level, you and your beast companion begin to flawlessly coordinate attacks. When you use the Attack action on your turn, if your companion can see you, it can use its reaction to make a melee attack."}
+                    ],
+                    "level_11": [
+                        {"name": "Vicious Mauling", "desc": "At 11th level, you can spend 1 Fury point as a bonus action to have your beast companion make a melee attack against each creature of its choice within 5 feet of it, with a separate attack roll for each target."}
+                    ],
+                    "level_17": [
+                        {"name": "Chain Frenzy", "desc": "Beginning at 17th level, when you enter your frenzy using Thrill of the Fight, your beast companion also gains certain benefits. It gains resistance to bludgeoning, piercing, and slashing damage and deals an extra amount of damage on each of its attacks equal to half of your Proficiency bonus (rounded up) for 1 minute unless it falls unconscious or your frenzy ends early."}
+                    ]
+                }
             }
         }
     }

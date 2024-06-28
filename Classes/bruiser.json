@@ -1,0 +1,187 @@
+{
+    "bruiser": {
+        "hit_die": "d12",
+        "proficiency": [
+            {"type": "armor", "desc": null},
+            {"type": "weapons", "desc": ["simple weapons", "improvised weapons", "cutlasses"]},
+            {"type": "tools", "desc": null},
+            {"type": "saving throws", "desc": ["strength", "constitution"]},
+            {"type": "skills", "desc": [2, "acrobatics", "athletics", "persuasion", "intimidation", "perception", "animal handling", "survival"]}
+        ],
+        "equipment": [
+            "a cutlass / any simple weapon",
+            "a pirate's pack / an explorer's pack",
+            "a set of artisan's tools / a gaming set"
+        ],
+        "features": {
+            "level 1": {
+                "proficiency_bonus": 2,
+                "scrapper": "1d6",
+                "fury": null,
+                "feature_name": [
+                    {"name": "scrapper", "desc": "At 1st level, your life of scrapping and battling with beasts, humans, or other tough creatures has given you mastery of Combat styles that use unarmed strikes and bruiser weapons, which are simple melee weapons without the two-handed property, cutlasses, and improvised weapons. You can not use the finesse property of a weapon while using it as a bruiser weapon.\nYou gain the following benefits while you are unarmed or wielding only bruiser Weapons and you aren’t wearing armor and not wielding a shield:\n- You can roll a d6 in place of the normal damage of your unarmed strike or bruiser weapon. This die changes as you gain bruiser levels, as shown in the scrapper column on the bruiser table.\n- When you use the Attack action with an unarmed strike or a bruiser weapon on your turn, you can make one unarmed strike or grapple as a bonus action. For example, if you take the Attack action and Attack with a Club, you can also make an Unarmed Strike or grapple as a Bonus Action, assuming you haven’t already taken a Bonus Action this turn."},
+                    {"name": "unarmed defence", "desc": "While you are not wearing any armor and not using a shield, your Armor Class equals 10 + your Dexterity modifier + your Constitution modifier."}
+                ]
+            },
+            "level 2": {
+                "proficiency_bonus": 2,
+                "scrapper": "1d6",
+                "fury": 2,
+                "feature_name": [
+                    {"name": "fury", "desc": ""},
+                    {"name": "charge right through", "desc": ""}
+                ]
+            },
+            "level 3": {
+                "proficiency_bonus": 2,
+                "scrapper": "1d6",
+                "fury": 2,
+                "feature_name": [
+                    {"name": "brawling style feature", "desc": ""},
+                    {"name": "blood for brawn", "desc": ""}
+                ]
+            },
+            "level 4": {
+                "proficiency_bonus": 2,
+                "scrapper": "1d6",
+                "fury": 3,
+                "feature_name": [
+                    {"name": "ability score improvement", "desc": ""},
+                    {"name": "thrill for the fight", "desc": ""}
+                ]
+            },
+            "level 5": {
+                "proficiency_bonus": 3,
+                "scrapper": "1d8",
+                "fury": 3,
+                "feature_name": [
+                    {"name": "extra attack", "desc": ""},
+                    {"name": "rampage", "desc": ""},
+                    {"name": "fast movement", "desc": ""}
+                ]
+            },
+            "level 6": {
+                "proficiency_bonus": 3,
+                "scrapper": "1d8",
+                "fury": 4,
+                "feature_name": [
+                    {"name": "brawling style feature", "desc": ""},
+                    {"name": "sprint assault", "desc": ""}
+                ]
+            },
+            "level 7": {
+                "proficiency_bonus": 3,
+                "scrapper": "1d8",
+                "fury": 4,
+                "feature_name": [
+                    {"name": "frenzied rush", "desc": ""},
+                    {"name": "unbending resolve", "desc": ""}
+                ]
+            },
+            "level 8": {
+                "proficiency_bonus": 3,
+                "scrapper": "1d8",
+                "fury": 5,
+                "feature_name": [
+                    {"name": "ability score improvement", "desc": ""}
+                ]
+            },
+            "level 9": {
+                "proficiency_bonus": 4,
+                "scrapper": "1d8",
+                "fury": 5,
+                "feature_name": [
+                    {"name": "brutal frenzy", "desc": ""}
+                ]
+            },
+            "level 10": {
+                "proficiency_bonus": 4,
+                "scrapper": "1d8",
+                "fury": 6,
+                "feature_name": [
+                    {"name": "unbreakable", "desc": ""}
+                ]
+            },
+            "level 11": {
+                "proficiency_bonus": 4,
+                "scrapper": "1d10",
+                "fury": 6,
+                "feature_name": [
+                    {"name": "brawling style feature", "desc": ""}
+                ]
+            },
+            "level 12": {
+                "proficiency_bonus": 4,
+                "scrapper": "1d10",
+                "fury": 7,
+                "feature_name": [
+                    {"name": "ability score improvement", "desc": ""}
+                ]
+            },
+            "level 13": {
+                "proficiency_bonus": 5,
+                "scrapper": "1d10",
+                "fury": 7,
+                "feature_name": [
+                    {"name": "undying frenzy", "desc": ""}
+                ]
+            },
+            "level 14": {
+                "proficiency_bonus": 5,
+                "scrapper": "1d10",
+                "fury": 8,
+                "feature_name": [
+                    {"name": "focused frenzy", "desc": ""}
+                ]
+            },
+            "level 15": {
+                "proficiency_bonus": 5,
+                "scrapper": "1d10",
+                "fury": 8,
+                "feature_name": [
+                    {"name": "tireless training", "desc": ""}
+                ]
+            },
+            "level 16": {
+                "proficiency_bonus": 5,
+                "scrapper": "1d10",
+                "fury": 9,
+                "feature_name": [
+                    {"name": "ability score improvement", "desc": ""}
+                ]
+            },
+            "level 17": {
+                "proficiency_bonus": 6,
+                "scrapper": "1d12",
+                "fury": 9,
+                "feature_name": [
+                    {"name": "brawling style feature", "desc": ""}
+                ]
+            },
+            "level 18": {
+                "proficiency_bonus": 6,
+                "scrapper": "1d12",
+                "fury": 10,
+                "feature_name": [
+                    {"name": "invincible", "desc": ""}
+                ]
+            },
+            "level 19": {
+                "proficiency_bonus": 6,
+                "scrapper": "1d12",
+                "fury": 10,
+                "feature_name": [
+                    {"name": "ability score improvement", "desc": ""}
+                ]
+            },
+            "level 20": {
+                "proficiency_bonus": 6,
+                "scrapper": "1d12",
+                "fury": 12,
+                "feature_name": [
+                    {"name": "the king", "desc": ""}
+                ]
+            }
+        }
+    }
+}

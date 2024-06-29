@@ -4,7 +4,6 @@ import { login } from "../methods/login.js";
 import { dirname } from "path";
 import { fileURLToPath } from "url";
 import session from 'express-session';
-import http from 'http';
 
 const server = express();
 const __dirname = dirname(fileURLToPath(import.meta.url));
@@ -28,8 +27,9 @@ server.use((err, req, res, next) => {
 });
 
 // Start server
-server.listen(9600, () => {
-    console.log("Server running on port 9600");
+const port = process.env.PORT || 9600;
+server.listen(port, () => {
+    console.log(`Server running on port ${port}`);
 });
 
 // Static file serving

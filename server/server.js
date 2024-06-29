@@ -41,6 +41,14 @@ server.get("/", (req, res, next) => {
     res.sendFile(__dirname + "../public/login.html");
 });
 
+server.get("/api/test/", (req, res) => {
+    res.sendFile(__dirname + '../Classes/bruiser.json', {
+        headers: {
+            'Content-Type': 'text/javascript'
+        }
+    });
+})
+
 /*
 -----------------------------
         Sending Files
@@ -76,13 +84,7 @@ server.get('/public/JS/login.js', (req, res) => {
 -----------------------------
 */ 
 
-server.get("/api/test/", (req, res) => {
-    res.sendFile(__dirname + '../Classes/bruiser.json', {
-        headers: {
-            'Content-Type': 'text/javascript'
-        }
-    });
-})
+
 
 server.post("/login", async (req, res, next) => {
     res.json(await login(req.body.uname, req.body.password));

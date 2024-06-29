@@ -1,16 +1,15 @@
 import express from "express";
 import cors from "cors";
-import {login} from "../methods/login.js";
+import { login } from "../methods/login.js";
 import { dirname } from "path";
 import { fileURLToPath } from "url";
 import session from 'express-session';
 import http from 'http';
 
-//const users = require('./methods/users.json');
-
-var server = express();
+const server = express();
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
+// Middleware setup
 server.use((req, res, next) => {
     res.header('Access-Control-Allow-Origin', '*');
     res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
@@ -22,53 +21,46 @@ server.use(cors());
 server.use(express.json());
 server.use(express.urlencoded({ extended: true }));
 
-// app.use((req, res, next) => {
-//     const clientIp = req.headers['x-forwarded-for'] || req.socket.remoteAddress;
-//     console.log('Client IP:', ip);
-//     const user = Object.values(users).find(user => user.ip === clientIP);
-  
-//     if (user) {
-//         req.user = user; // Attach user object to request
-//     }
-//     next();
-// });
+// Error handling middleware
+server.use((err, req, res, next) => {
+    console.error(err.stack);
+    res.status(500).send('Something broke!');
+});
 
+// Start server
 server.listen(9600, () => {
- console.log("Server running on port 9600");
+    console.log("Server running on port 9600");
 });
 
-server.get("/", (req, res, next) => {
-    res.sendFile(__dirname + "../public/login.html");
+// Static file serving
+server.get("/", (req, res) => {
+    res.sendFile(__dirname + "/../public/login.html");
 });
 
-server.get("/api/test/", (req, res) => {
-    res.sendFile(__dirname + '../Classes/bruiser.json', {
+server.get("/api/test", (req, res) => {
+    res.sendFile(__dirname + '/../Classes/bruiser.json', {
         headers: {
-            'Content-Type': 'text/javascript'
+            'Content-Type': 'application/json'
         }
     });
-})
+});
 
-/*
------------------------------
-        Sending Files
------------------------------
-*/ 
+// API routes
+server.post("/login", async (req, res) => {
+    try {
+        const result = await login(req.body.uname, req.body.password);
+        res.json(result);
+    } catch (error) {
+        res.status(500).json({ error: 'Internal Server Error' });
+    }
+});
 
-/*
------------------------------
-            APIs
------------------------------
-*/ 
-
-
-
-server.post("/login", async (req, res, next) => {
-    res.json(await login(req.body.uname, req.body.password));
-})
-
-server.post("/create-campaign", async (req, res, next) => {
-    res.json({'Hello':'World!'});
-})
+server.post("/create-campaign", async (req, res) => {
+    try {
+        res.json({ 'Hello': 'World!' });
+    } catch (error) {
+        res.status(500).json({ error: 'Internal Server Error' });
+    }
+});
 
 export default server;

@@ -54,29 +54,6 @@ server.get("/api/test/", (req, res) => {
         Sending Files
 -----------------------------
 */ 
-server.get('/CSS/login.css', (req, res) => {
-    res.sendFile(__dirname + '../public/CSS/login.css', {
-        headers: {
-            'Content-Type': 'text/css'
-        }
-    });
-});
-
-server.get('/public/Image/dnd-bg.png', (req, res) => {
-    res.sendFile(__dirname + '../public/Image/dnd-bg.png', {
-        headers: {
-            'Content-Type': 'text/css'
-        }
-    })
-})
-
-server.get('/public/JS/login.js', (req, res) => {
-    res.sendFile(__dirname + '../public/JS/login.js', {
-        headers: {
-            'Content-Type': 'text/javascript'
-        }
-    })
-})
 
 /*
 -----------------------------

@@ -76,7 +76,7 @@ server.get('/public/JS/login.js', (req, res) => {
 -----------------------------
 */ 
 
-server.get("/login/", (req, res) => {
+server.get("/api/test/", (req, res) => {
     res.sendFile(__dirname + '../Classes/bruiser.json', {
         headers: {
             'Content-Type': 'text/javascript'

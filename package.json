@@ -2,7 +2,7 @@
   "name": "dungeons-and-devils",
   "version": "1.0.0",
   "description": "A Dnd Beyond clone for Homebrew system based on One Piece Anime/Manga",
-  "main": "server.js",
+  "main": "server/server.js",
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

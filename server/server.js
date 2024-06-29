@@ -1,5 +1,5 @@
 import express from "express";
-const cors = require('cors');
+import cors from "cors";
 import {login} from "../methods/login.js";
 import { dirname } from "path";
 import { fileURLToPath } from "url";
@@ -38,7 +38,7 @@ server.listen(9600, () => {
 });
 
 server.get("/", (req, res, next) => {
-    res.sendFile(__dirname + "/public/login.html");
+    res.sendFile(__dirname + "../public/login.html");
 });
 
 /*
@@ -47,7 +47,7 @@ server.get("/", (req, res, next) => {
 -----------------------------
 */ 
 server.get('/CSS/login.css', (req, res) => {
-    res.sendFile(__dirname + '/public/CSS/login.css', {
+    res.sendFile(__dirname + '../public/CSS/login.css', {
         headers: {
             'Content-Type': 'text/css'
         }
@@ -55,7 +55,7 @@ server.get('/CSS/login.css', (req, res) => {
 });
 
 server.get('/public/Image/dnd-bg.png', (req, res) => {
-    res.sendFile(__dirname + '/public/Image/dnd-bg.png', {
+    res.sendFile(__dirname + '../public/Image/dnd-bg.png', {
         headers: {
             'Content-Type': 'text/css'
         }
@@ -63,7 +63,7 @@ server.get('/public/Image/dnd-bg.png', (req, res) => {
 })
 
 server.get('/public/JS/login.js', (req, res) => {
-    res.sendFile(__dirname + '/public/JS/login.js', {
+    res.sendFile(__dirname + '../public/JS/login.js', {
         headers: {
             'Content-Type': 'text/javascript'
         }
@@ -76,8 +76,12 @@ server.get('/public/JS/login.js', (req, res) => {
 -----------------------------
 */ 
 
-server.get("/login", (req, res) => {
-    res.json({"Hello":"World!"});
+server.get("/login/", (req, res) => {
+    res.sendFile(__dirname + '../Classes/bruiser.json', {
+        headers: {
+            'Content-Type': 'text/javascript'
+        }
+    });
 })
 
 server.post("/login", async (req, res, next) => {
@@ -85,7 +89,7 @@ server.post("/login", async (req, res, next) => {
 })
 
 server.post("/create-campaign", async (req, res, next) => {
-    
+    res.json({'Hello':'World!'});
 })
 
 export default server;
